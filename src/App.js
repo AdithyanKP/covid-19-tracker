@@ -3,7 +3,7 @@ import React from "react";
 //Components//
 import { Cards } from "./components/Cards/Card";
 import Countrypicker from "./components/CountryPicker/CountryPicker";
-import Chart from "./components/Chart/Chart";
+import Charts from "./components/Chart/Chart";
 
 //Css//
 import styles from "./App.module.css";
@@ -24,7 +24,7 @@ class App extends React.Component {
       <div className={styles.container}>
         <Cards data={data} />
         <Countrypicker />
-        <Chart />
+        <Charts />
       </div>
     );
   }
