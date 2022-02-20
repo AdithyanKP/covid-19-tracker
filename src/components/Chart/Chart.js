@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchDailyData } from "../../api";
 import { Line } from "react-chartjs-2";
+import styles from "./Chart.module.css";
 import { Chart, registerables } from "chart.js";
 Chart.register(...registerables);
 const Charts = () => {
@@ -44,7 +45,7 @@ const Charts = () => {
     />
   ) : null;
 
-  return <div className="container">{lineChart}</div>;
+  return <div className={styles.container}>{lineChart}</div>;
 };
 
 export default Charts;

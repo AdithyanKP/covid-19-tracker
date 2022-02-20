@@ -1,9 +1,13 @@
 import React from "react";
-
+import { NativeSelect, FormControl } from "@mui/material";
 const Countrypicker = () => {
   return (
     <div>
-      <h1>CountryPicker</h1>
+      <FormControl>
+        <NativeSelect>
+          <option value="global">Global</option>
+        </NativeSelect>
+      </FormControl>
     </div>
   );
 };
