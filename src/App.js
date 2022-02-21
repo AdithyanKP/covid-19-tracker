@@ -4,7 +4,7 @@ import React from "react";
 import { Cards } from "./components/Cards/Card";
 import Countrypicker from "./components/CountryPicker/CountryPicker";
 import Charts from "./components/Chart/Chart";
-import coronaImage from "./Images/image.png";
+import coronaImage from "./Images/images.png";
 //Css//
 import styles from "./App.module.css";
 //api//

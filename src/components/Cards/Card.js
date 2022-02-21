@@ -38,7 +38,7 @@ export const Cards = ({
             </Typography>
           </CardContent>
         </Grid>
-        <Grid
+        {/*  <Grid
           item
           component={Card}
           className={cx(styles.Card, styles.recovered)}
@@ -55,7 +55,7 @@ export const Cards = ({
               Number of Recovered cases in covid -19
             </Typography>
           </CardContent>
-        </Grid>
+        </Grid> */}
         <Grid item component={Card} className={cx(styles.Card, styles.deaths)}>
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
