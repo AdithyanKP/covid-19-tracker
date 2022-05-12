@@ -9,6 +9,7 @@ import coronaImage from "./Images/images.png";
 import styles from "./App.module.css";
 //api//
 import { fetchData } from "./api";
+
 class App extends React.Component {
   state = {
     data: {},
@@ -19,6 +20,8 @@ class App extends React.Component {
 
     this.setState({ data });
   }
+
+  //country change handler function
   handleCountryChange = async (country) => {
     console.log(country);
     const data = await fetchData(country);

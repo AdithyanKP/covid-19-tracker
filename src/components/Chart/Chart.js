@@ -3,9 +3,12 @@ import { fetchDailyData } from "../../api";
 import { Line, Bar } from "react-chartjs-2";
 import styles from "./Chart.module.css";
 import { Chart, registerables } from "chart.js";
-Chart.register(...registerables);
+
+Chart.register(...registerables); //chart configuration better working
+
 const Charts = ({ data: { confirmed, recovered, deaths }, country }) => {
   const [dailyData, setDailyData] = useState([]);
+
   useEffect(() => {
     const fetchApi = async () => {
       const data = await fetchDailyData();
@@ -13,6 +16,8 @@ const Charts = ({ data: { confirmed, recovered, deaths }, country }) => {
     };
     fetchApi();
   }, []);
+
+  //line chart for gloabal classsification
   const lineChart = dailyData[0] ? (
     <Line
       data={{
@@ -38,6 +43,7 @@ const Charts = ({ data: { confirmed, recovered, deaths }, country }) => {
     />
   ) : null;
 
+  //barchart for specific country details
   const barChart = confirmed ? (
     <Bar
       data={{
@@ -56,6 +62,7 @@ const Charts = ({ data: { confirmed, recovered, deaths }, country }) => {
       }}
     />
   ) : null;
+
   return (
     <div className={styles.container}>{country ? barChart : lineChart}</div>
   );

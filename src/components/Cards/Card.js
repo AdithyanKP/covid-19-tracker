@@ -1,8 +1,9 @@
 import React from "react";
 import { Card, CardContent, Typography, Grid } from "@mui/material";
-import CountUp from "react-countup";
-import cx from "classnames";
+import CountUp from "react-countup"; //for live counting
+import cx from "classnames"; //combining two style classses
 import styles from "./Card.module.css";
+
 export const Cards = ({
   data: { confirmed, deaths, lastUpdate, recoverd },
 }) => {
